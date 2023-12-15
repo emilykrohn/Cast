@@ -268,9 +268,13 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_pdfk2"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ux4vi"]
+radius = 5.0
+height = 22.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_haura"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2mkhe"]
+radius = 5.0
+height = 22.0
 
 [node name="Player" type="CharacterBody2D"]
 
@@ -279,12 +283,14 @@ sprite_frames = SubResource("SpriteFrames_gkhjb")
 animation = &"attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_pdfk2")
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_ux4vi")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_haura")
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_2mkhe")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
