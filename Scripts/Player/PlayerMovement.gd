@@ -19,8 +19,14 @@ func movement():
 		start_cooldown()
 
 	if horizontal_direction or vertical_direction:
+		%AnimationPlayer.play("walk")
+		if horizontal_direction < 0:
+			%AnimationPlayer.flip_left()
+		else:
+			%AnimationPlayer.flip_right()
 		get_parent().velocity = Vector2(horizontal_direction, vertical_direction).normalized() * get_parent().speed
 	else:
+		%AnimationPlayer.play("idle")
 		get_parent().velocity = Vector2(0,0)
 
 func start_cooldown():

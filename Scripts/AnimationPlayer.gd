@@ -5,5 +5,8 @@ extends Node
 func play(animation):
 	_sprite.play(animation)
 
-func stop():
-	_sprite.stop()
+func flip_left():
+	_sprite.flip_h = true
+
+func flip_right():
+	_sprite.flip_h = false
