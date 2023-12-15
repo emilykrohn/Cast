@@ -1,6 +1,7 @@
-[gd_scene load_steps=39 format=3 uid="uid://roupub5c17d0"]
+[gd_scene load_steps=40 format=3 uid="uid://roupub5c17d0"]
 
 [ext_resource type="Texture2D" uid="uid://4ni8oj2h6mos" path="res://Art/AnimationSheet_Character.png" id="1_8p0i3"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_kw68t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5v8yw"]
 atlas = ExtResource("1_8p0i3")
@@ -277,6 +278,7 @@ radius = 5.0
 height = 22.0
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_kw68t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gkhjb")
