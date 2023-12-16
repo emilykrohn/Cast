@@ -1,28 +1,86 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3b8j3wih0cfq"]
+[gd_scene load_steps=13 format=3 uid="uid://c3b8j3wih0cfq"]
 
 [ext_resource type="Script" path="res://Scripts/bat.gd" id="1_6ggpc"]
-[ext_resource type="Texture2D" uid="uid://cf0o63lt1e5hy" path="res://Art/icon.svg" id="2_krg41"]
+[ext_resource type="Texture2D" uid="uid://bw7123asv1ghk" path="res://Art/Monsters_Creatures_Fantasy/Flying eye/Flight.png" id="2_t4anl"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bo3t0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ribi"]
+atlas = ExtResource("2_t4anl")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fowrt"]
+atlas = ExtResource("2_t4anl")
+region = Rect2(150, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ennl"]
+atlas = ExtResource("2_t4anl")
+region = Rect2(300, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1y4y"]
+atlas = ExtResource("2_t4anl")
+region = Rect2(450, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_am1aw"]
+atlas = ExtResource("2_t4anl")
+region = Rect2(600, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80eml"]
+atlas = ExtResource("2_t4anl")
+region = Rect2(750, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvjqq"]
+atlas = ExtResource("2_t4anl")
+region = Rect2(900, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vamdd"]
+atlas = ExtResource("2_t4anl")
+region = Rect2(1050, 0, 150, 150)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sv6mi"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_krg41")
+"texture": SubResource("AtlasTexture_1ribi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fowrt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ennl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1y4y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_am1aw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80eml")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uvjqq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vamdd")
 }],
 "loop": true,
-"name": &"default",
-"speed": 5.0
+"name": &"Flying",
+"speed": 15.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bo3t0"]
+size = Vector2(3, 3)
 
 [node name="Bat" type="Area2D"]
 script = ExtResource("1_6ggpc")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_bo3t0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0.5, -4.76837e-07)
 scale = Vector2(0.179688, 0.171875)
 sprite_frames = SubResource("SpriteFrames_sv6mi")
+animation = &"Flying"
+frame = 6
+frame_progress = 0.636496
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 0.5)
+shape = SubResource("RectangleShape2D_bo3t0")
