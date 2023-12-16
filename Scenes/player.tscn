@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://4ni8oj2h6mos" path="res://Art/AnimationSheet_Character.png" id="1_8p0i3"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_kw68t"]
 [ext_resource type="Script" path="res://Scripts/Player/PlayerMovement.gd" id="3_74q8e"]
-[ext_resource type="Script" path="res://Scripts/AnimationPlayer.gd" id="4_y6i1v"]
+[ext_resource type="PackedScene" uid="uid://owgj6ob0wkr6" path="res://Scenes/animation_player.tscn" id="4_lx202"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5v8yw"]
 atlas = ExtResource("1_8p0i3")
@@ -297,12 +297,11 @@ position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_2mkhe")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
+zoom = Vector2(3, 3)
 
 [node name="PlayerMovement" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("3_74q8e")
 
-[node name="AnimationPlayer" type="Node" parent="."]
+[node name="AnimationPlayer" parent="." instance=ExtResource("4_lx202")]
 unique_name_in_owner = true
-script = ExtResource("4_y6i1v")

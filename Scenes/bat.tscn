@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://c3b8j3wih0cfq"]
+[gd_scene load_steps=14 format=3 uid="uid://c3b8j3wih0cfq"]
 
 [ext_resource type="Script" path="res://Scripts/bat.gd" id="1_6ggpc"]
 [ext_resource type="Texture2D" uid="uid://bw7123asv1ghk" path="res://Art/Monsters_Creatures_Fantasy/Flying eye/Flight.png" id="2_t4anl"]
+[ext_resource type="PackedScene" uid="uid://owgj6ob0wkr6" path="res://Scenes/animation_player.tscn" id="3_k2dsx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1ribi"]
 atlas = ExtResource("2_t4anl")
@@ -71,6 +72,7 @@ animations = [{
 size = Vector2(3, 3)
 
 [node name="Bat" type="Area2D"]
+scale = Vector2(5, 5)
 script = ExtResource("1_6ggpc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -84,3 +86,5 @@ frame_progress = 0.636496
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.5, 0.5)
 shape = SubResource("RectangleShape2D_bo3t0")
+
+[node name="AnimationPlayer" parent="." instance=ExtResource("3_k2dsx")]

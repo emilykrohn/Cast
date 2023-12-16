@@ -1354,4 +1354,4 @@ position = Vector2(834, 499)
 
 [node name="Bat" parent="Level1" instance=ExtResource("8_64m55")]
 z_index = 1
-position = Vector2(715, 507)
+position = Vector2(711, 501)
