@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://vessqqdsqdfu"]
+[gd_scene load_steps=16 format=3 uid="uid://vessqqdsqdfu"]
 
 [ext_resource type="Texture2D" uid="uid://co8ycokg60ddl" path="res://Art/Environment/TX Tileset Grass.png" id="1_r67on"]
 [ext_resource type="Texture2D" uid="uid://x3n3vy6xtyug" path="res://Art/Environment/TX Tileset Stone Ground.png" id="2_a8lfj"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dpy61hul0queq" path="res://Art/Environment/TX Plant.png" id="5_djeue"]
 [ext_resource type="Texture2D" uid="uid://5flvkwdihhdf" path="res://Art/Environment/TX Shadow Plant.png" id="6_1leb2"]
 [ext_resource type="PackedScene" uid="uid://roupub5c17d0" path="res://Scenes/player.tscn" id="7_gxy7k"]
+[ext_resource type="PackedScene" uid="uid://c3b8j3wih0cfq" path="res://Scenes/bat.tscn" id="8_64m55"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_krqfr"]
 texture = ExtResource("1_r67on")
@@ -1350,3 +1351,7 @@ layer_3/tile_data = PackedInt32Array(393244, 65541, 0, 393245, 131077, 0, 393246
 unique_name_in_owner = true
 z_index = 1
 position = Vector2(834, 499)
+
+[node name="Bat" parent="Level1" instance=ExtResource("8_64m55")]
+z_index = 1
+position = Vector2(715, 507)

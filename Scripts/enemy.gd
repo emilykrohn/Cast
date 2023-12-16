@@ -1,8 +1,8 @@
 class_name enemy
 
 var health: int
-var enemy_global_position: Vector2
-var player_global_position: Vector2
+var position: Vector2
+var player_position: Vector2
 
 func take_damage(amount):
 	health -= amount
@@ -10,7 +10,7 @@ func take_damage(amount):
 func damage_player(player_health, amount):
 	return player_health - amount
 
-func if_in_range(range):
-	if abs(player_global_position - enemy_global_position) < Vector2(range,range):
+func in_range(range):
+	if abs(player_position.x - position.x) < range and abs(player_position.y - position.y) < range:
 		return true
 	return false
